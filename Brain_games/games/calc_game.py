@@ -22,7 +22,8 @@ def calc():
             print('Correct!')
             tries += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+            print(f"'{answer}' is wrong answer ;(. \
+                  Correct answer was '{correct_answer}'")
             return print(f"Let's try again, {name}!")
     if tries == 3:
         print(f'Congratulations, {name}!')
