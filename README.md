@@ -3,4 +3,6 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 [![hexlet-lint](https://github.com/Alexion24/python-project-lvl1/actions/workflows/lint.yml/badge.svg)](https://github.com/Alexion24/python-project-lvl1/actions/workflows/lint.yml)
 
-https://asciinema.org/a/BWNAAcibSFVSVwY3muV8uY3bH
+brain-even https://asciinema.org/a/BWNAAcibSFVSVwY3muV8uY3bH
+
+brain-calc https://asciinema.org/a/mr4k78bSoZlAlhBjmMYJ5DbSc
