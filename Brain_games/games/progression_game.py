@@ -37,8 +37,10 @@ def run_game():
             print('Correct!')
             tries += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{hidden_char}'.")
+            print(
+                "'{}' is wrong answer ;(. "
+                "Correct answer was '{}'.".format(answer, hidden_char)
+            )
             return print(f"Let's try again, {name}!")
     if tries == 3:
         print(f'Congratulations, {name}!')
