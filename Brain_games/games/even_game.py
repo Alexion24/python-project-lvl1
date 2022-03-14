@@ -6,7 +6,7 @@ def game_of_even():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer is "no"')
+    print('Answer "yes" if the number is even, otherwise answer is "no".')
     tries = 0
     while tries < 3:
         random_number = randint(1, 100)
