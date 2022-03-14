@@ -20,7 +20,7 @@ def game_of_gcd():
             tries += 1
         else:
             print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{gcd}'")
+                  f"Correct answer was '{gcd}'.")
             return print(f"Let's try again, {name}!")
     if tries == 3:
         print(f'Congratulations, {name}!')

@@ -21,7 +21,7 @@ def game_of_even():
             return print(f"Let's try again, {name}!")
 
         elif random_number % 2 != 0 and answer != 'no':
-            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
             return print(f"Let's try again, {name}!")
     if tries == 3:
         print(f'Congratulations, {name}!')
