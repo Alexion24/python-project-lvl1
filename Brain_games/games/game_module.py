@@ -1,0 +1,35 @@
+import prompt
+
+
+ROUNDS = 3
+
+
+def check_answer(answer, correct_answer):
+    if answer == str(correct_answer):
+        print('Correct!')
+        return True
+    else:
+        print(
+            "'{}' is wrong answer ;(. "
+            "Correct answer was '{}'.".format(answer, correct_answer)
+        )
+        return False
+
+
+def welcome_user():
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    return name
+
+
+def run_game(description, function):
+    name = welcome_user()
+    print(description)
+    for _ in range(ROUNDS):
+        question, correct_answer = function()
+        print(question)
+        answer = prompt.string('Your answer: ')
+        if not check_answer(answer, correct_answer):
+            return print(f"Let's try again, {name}!")
+    return print(f'Congratulations, {name}!')

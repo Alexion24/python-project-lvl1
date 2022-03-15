@@ -1,39 +1,30 @@
 from random import randint
-import prompt
+from Brain_games.games.game_module import run_game
 import math
 
 
-def is_prime():
-    random_number = randint(1, 50)
-    print(f'Question: {random_number}')
-    if random_number == 1:
-        return 'no'
+def is_prime(number):
+    if number == 1:
+        return False
     i = 2
-    while i <= math.sqrt(random_number):
-        if random_number % i < 1:
-            return 'no'
+    while i <= math.sqrt(number):
+        if number % i < 1:
+            return False
         i += 1
-    return 'yes'
+    return True
+
+
+def generate_question_and_answer():
+    random_number = randint(1, 50)
+    question = f'Question: {random_number}'
+    if is_prime(random_number):
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
+    return question, correct_answer
 
 
 def game_of_prime():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('Answer "yes" if given number is prime. '
-          'Otherwise answer "no".')
-    tries = 0
-    while tries < 3:
-        correct_answer = is_prime()
-        answer = prompt.string('Your answer: ')
-        if answer == correct_answer:
-            print('Correct!')
-            tries += 1
-        else:
-            print(
-                "'{}' is wrong answer ;(. "
-                "Correct answer was '{}'.".format(answer, correct_answer)
-            )
-            return print(f"Let's try again, {name}!")
-    if tries == 3:
-        print(f'Congratulations, {name}!')
+    description = 'Answer "yes" if given number is prime. '\
+                  'Otherwise answer "no".'
+    run_game(description, generate_question_and_answer)

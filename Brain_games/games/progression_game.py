@@ -1,8 +1,8 @@
-import prompt
+from Brain_games.games.game_module import run_game
 from random import randint, choice
 
 
-def progression():
+def generate_question_and_answer():
     prog_start = randint(1, 10)
     prog_step = randint(1, 10)
     prog_range = randint(5, 10)
@@ -11,36 +11,19 @@ def progression():
     for i in range(prog_range):
         prog_char += prog_step
         prog_list.append(prog_char)
-    hidden_char = choice(prog_list)
+    correct_answer = choice(prog_list)
     question_prog = []
     for num in prog_list:
-        if hidden_char == num:
+        if correct_answer == num:
             question_prog.append('..')
         else:
             question_prog.append(str(num))
     question_prog = ' '.join(question_prog)
-    print('Question: {}'.format(question_prog))
+    question = 'Question: {}'.format(question_prog)
 
-    return hidden_char
+    return question, correct_answer
 
 
-def run_game():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('What number is missing in the progression?')
-    tries = 0
-    while tries < 3:
-        hidden_char = progression()
-        answer = prompt.string('Your answer: ')
-        if answer == str(hidden_char):
-            print('Correct!')
-            tries += 1
-        else:
-            print(
-                "'{}' is wrong answer ;(. "
-                "Correct answer was '{}'.".format(answer, hidden_char)
-            )
-            return print(f"Let's try again, {name}!")
-    if tries == 3:
-        print(f'Congratulations, {name}!')
+def game_of_progressions():
+    description = 'What number is missing in the progression?'
+    run_game(description, generate_question_and_answer)
