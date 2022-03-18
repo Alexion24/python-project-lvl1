@@ -1,5 +1,5 @@
 from random import randint
-from Brain_games.games.game_module import run_game
+from Brain_games.game_module import run_game
 
 
 def generate_question_and_answer():
