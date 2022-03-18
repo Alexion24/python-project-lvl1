@@ -14,9 +14,13 @@ def is_prime(number):
     return True
 
 
+MIN_NUM = 1
+MAX_NUM = 50
+
+
 def generate_question_and_answer():
-    random_number = randint(1, 50)
-    question = f'Question: {random_number}'
+    random_number = randint(MIN_NUM, MAX_NUM)
+    question = f'{random_number}'
     if is_prime(random_number):
         correct_answer = 'yes'
     else:

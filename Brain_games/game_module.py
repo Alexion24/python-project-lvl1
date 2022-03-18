@@ -23,12 +23,12 @@ def welcome_user():
     return name
 
 
-def run_game(description, function):
+def run_game(description, game_data):
     name = welcome_user()
     print(description)
     for _ in range(ROUNDS):
-        question, correct_answer = function()
-        print(question)
+        question, correct_answer = game_data()
+        print(f"Question: {question}")
         answer = prompt.string('Your answer: ')
         if not check_answer(answer, correct_answer):
             return print(f"Let's try again, {name}!")

@@ -2,10 +2,18 @@ from Brain_games.game_module import run_game
 from random import randint, choice
 
 
+MIN_START = 0
+MAX_START = 10
+MIN_STEP = 1
+MAX_STEP = 10
+MIN_RANGE = 5
+MAX_RANGE = 10
+
+
 def generate_question_and_answer():
-    prog_start = randint(1, 10)
-    prog_step = randint(1, 10)
-    prog_range = randint(5, 10)
+    prog_start = randint(MIN_START, MAX_START)
+    prog_step = randint(MIN_STEP, MAX_STEP)
+    prog_range = randint(MIN_RANGE, MAX_RANGE)
     prog_list = [prog_start]
     prog_char = prog_start
     for i in range(prog_range):
@@ -19,8 +27,7 @@ def generate_question_and_answer():
         else:
             question_prog.append(str(num))
     question_prog = ' '.join(question_prog)
-    question = 'Question: {}'.format(question_prog)
-
+    question = '{}'.format(question_prog)
     return question, correct_answer
 
 
