@@ -12,11 +12,12 @@ def generate_question_and_answer():
     random_number1 = randint(MIN_NUM, MAX_NUM)
     random_number2 = randint(MIN_NUM, MAX_NUM)
     question = f'{random_number1} {operation} {random_number2}'
+    correct_answer = False
     if operation == '*':
         correct_answer = random_number1 * random_number2
     elif operation == '+':
         correct_answer = random_number1 + random_number2
-    else:
+    elif operation == '-':
         correct_answer = random_number1 - random_number2
     return question, correct_answer
 

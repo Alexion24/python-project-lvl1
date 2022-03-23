@@ -4,7 +4,7 @@ import math
 
 
 def is_prime(number):
-    if number == 1:
+    if number <= 1:
         return False
     i = 2
     while i <= math.sqrt(number):

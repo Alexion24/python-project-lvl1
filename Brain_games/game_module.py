@@ -1,7 +1,7 @@
 import prompt
 
 
-ROUNDS = 3
+ROUND_COUNT = 3
 
 
 def check_answer(answer, correct_answer):
@@ -26,10 +26,10 @@ def welcome_user():
 def run_game(description, game_data):
     name = welcome_user()
     print(description)
-    for _ in range(ROUNDS):
+    for _ in range(ROUND_COUNT):
         question, correct_answer = game_data()
         print(f"Question: {question}")
         answer = prompt.string('Your answer: ')
         if not check_answer(answer, correct_answer):
-            return print(f"Let's try again, {name}!")
-    return print(f'Congratulations, {name}!')
+            print(f"Let's try again, {name}!")
+    print(f'Congratulations, {name}!')

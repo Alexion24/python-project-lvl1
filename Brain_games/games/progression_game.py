@@ -11,17 +11,17 @@ MAX_RANGE = 10
 
 
 def generate_question_and_answer():
-    prog_start = randint(MIN_START, MAX_START)
-    prog_step = randint(MIN_STEP, MAX_STEP)
-    prog_range = randint(MIN_RANGE, MAX_RANGE)
-    prog_list = [prog_start]
-    prog_char = prog_start
-    for i in range(prog_range):
-        prog_char += prog_step
-        prog_list.append(prog_char)
-    correct_answer = choice(prog_list)
+    progression_start = randint(MIN_START, MAX_START)
+    progression_step = randint(MIN_STEP, MAX_STEP)
+    progression_range = randint(MIN_RANGE, MAX_RANGE)
+    progression_list = [progression_start]
+    progression_char = progression_start
+    for i in range(progression_range):
+        progression_char += progression_step
+        progression_list.append(progression_char)
+    correct_answer = choice(progression_list)
     question_prog = []
-    for num in prog_list:
+    for num in progression_list:
         if correct_answer == num:
             question_prog.append('..')
         else:
