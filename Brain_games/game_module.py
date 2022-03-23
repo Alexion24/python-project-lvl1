@@ -32,4 +32,5 @@ def run_game(description, game_data):
         answer = prompt.string('Your answer: ')
         if not check_answer(answer, correct_answer):
             print(f"Let's try again, {name}!")
+            return
     print(f'Congratulations, {name}!')
