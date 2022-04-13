@@ -25,7 +25,7 @@ https://asciinema.org/a/mr4k78bSoZlAlhBjmMYJ5DbSc
 brain-gcd Определение наибольшего общего делителя(НОД) для двух чисел.
 https://asciinema.org/a/XsRW0jnP9ofXQ9rrtAxxMYrWD
 
-brain-progression Определение пропущенного числа в последжовательности.
+brain-progression Определение пропущенного числа в последовательности.
 https://asciinema.org/a/bUt4GLPspJlg9JGDfIGImZYuT
 
 brain-prime Определение простого числа.
